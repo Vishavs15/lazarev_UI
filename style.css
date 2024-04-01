@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    color: white;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+nav{
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    height: 10vh;
+    width: 100%;
+    padding: 1.5vw 9.4vw;
+    justify-content: space-between;
+}
+.nav-2{
+    display: flex;
+    gap: 2.5vw;   
+    align-items: flex-start;
+    padding: 1vh 0;
+    position: relative;
+    z-index: 10;
+}
+.nav-2 h4{
+    font-size: 0.7vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 2vw;
+}
+.nav-2 h5{
+    margin-bottom: 1vw;
+    display: none;
+    overflow: hidden;
+}
+.nav-2 h5 span{
+    font-size: 0.77vw;
+    font-weight: 400;
+    display: inline-block;
+}
+/* ============================================================*/
+.nav-bottom{
+    /* height: 0vh; */
+    width: 81%;
+    top: 100%;
+    position: absolute;
+    border-bottom: 1px solid #dadada;
+    background-color: #1B1B1B;
+    z-index: 9;
+    transition: all ease 1s;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+nav:hover .nav-bottom{
+    height: 100%;
+    bottom: -100%;
+}
+/* ============================================================*/
+
+nav button{
+    background-color: #07803b;
+    display: flex;
+    align-items: center;
+    padding: 12px 12px;
+    border-radius: 50px;
+    border: none;
+    font-size: 0.85vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    /* margin: 0 0.5vw; */
+}
+nav button svg{
+    height: 0.85vw;
+    margin-left: 1vw;
+}
+
+/* =========================================================== */
+
+.section1{
+    height: 100vh;
+    width: 100%;
+    background-color: #1B1B1B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section1 h1{
+    font-size: 8.5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 8.5vw;
+}
+.section1 h1 svg{
+    height: 6vw;
+    width: 6vw;
+    background-color: #07803b;
+    border-radius: 50%;
+}
+.section1 p{
+    text-align: center;
+    font-weight: 400;
+    margin-top: 3vh;
+}
+.section1 .page1-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 40px; */
+}
+.section1 .page1-text h4{
+    font-weight: 400;
+    font-size: 1vw;
+    text-transform: lowercase;
+    padding: 5px 10px;
+    border: 1px solid rgba(201, 201, 201, 0.562);
+    border-radius: 50px;
+    margin-top: 0.5vw;
+}
+.section1 .page1-text h4:nth-last-child(2){
+    border: none;
+    padding: 2px;
+}
+.moving-imgs{
+    /* background-color: green; */
+    margin-top: 10vh;
+    position: absolute;
+    bottom: 3%;
+    display: flex;
+    width: 50%;
+    white-space: nowrap;
+    padding: 1.2vw;
+    overflow: hidden;
+}
+.moving-imgs .move{
+    display: inline-block;
+    animation: img_move 8s linear infinite;
+}
+.moving-imgs .move img{
+    height: 1.3vw;
+    margin: 0 1.2vw;
+}
+/* keyframes use to create animation in css  */
+@keyframes img_move { 
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.blur_left{
+    height: 100%;
+    width: 15%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    /* background-color: #07803b; */
+    background: linear-gradient(to right,#1B1B1B,transparent);
+    z-index: 2;
+}
+.blur_right{
+    height: 100%;
+    width: 15%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background: linear-gradient(to right,transparent,#1B1B1B);
+}
+/* =========================================================== */
+
+.section2{
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+}
